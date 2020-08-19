@@ -37,19 +37,19 @@ element {
 /* parallax groups */
 .wp-block-group.parallax-background,
 .wp-block-group.parallax-foreground {
-    min-height:50vh;
-    height:auto;
-    max-width:100%;
-    margin:0;
-    padding:0;
+    min-height:50vh !important;
+    height:auto !important;
+    max-width:100% !important;
+    width:100% !important;
+    margin:0 !important;
+    padding:1em;
     position:relative;
-
-    background-attachment:fixed;
-    background-size:cover;
-    box-shadow:inset 0px 5px 5px -5px #000000, inset 0px -5px 5px -5px #000000;
 }
 .wp-block-group.parallax-background {
+    background-attachment:fixed;
     background-image:url(default_image_mobile.jpg);
+    background-size:cover;
+    box-shadow:inset 0px 5px 5px -5px #000000, inset 0px -5px 5px -5px #000000;
 }
 .wp-block-group.parallax-foreground {
     box-shadow:none;
