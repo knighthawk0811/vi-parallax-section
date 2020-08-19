@@ -1,0 +1,155 @@
+/*!
+Plugin Name: VI: Parallax Sections
+Plugin URI: http://neathawk.com
+Description: styling of parallax sections, can add through block/groups
+Version: 0.1.200814
+Author: Joseph Neathawk
+Author URI: http://Neathawk.com
+License: GNU General Public License v2 or later
+*/
+
+/*--------------------------------------------------------------
+# VI Stuff
+--------------------------------------------------------------*/
+/*
+element {
+	layout(position)
+
+	content(text)
+
+	design(background)
+
+	other(z-index)
+}
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Group Structure
+# Extra
+# Media Queries
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Group Structure
+--------------------------------------------------------------*/
+
+/* parallax groups */
+.wp-block-group.parallax-background,
+.wp-block-group.parallax-foreground {
+    min-height:50vh;
+    height:auto;
+    max-width:100%;
+    margin:0;
+    padding:0;
+    position:relative;
+
+    background-attachment:fixed;
+    background-size:cover;
+    box-shadow:inset 0px 5px 5px -5px #000000, inset 0px -5px 5px -5px #000000;
+}
+.wp-block-group.parallax-background {
+    background-image:url(default_image_mobile.jpg);
+}
+.wp-block-group.parallax-foreground {
+    box-shadow:none;
+}
+.wp-block-group.parallax-background > .wp-block-group__inner-container,
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container {
+    max-width:100%;
+    height:100%;
+
+    overflow:hidden;
+}
+.wp-block-group.parallax-background > .wp-block-group__inner-container > *,
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > * {
+    position:relative;
+}
+.wp-block-group.parallax-background > .wp-block-group__inner-container > figure:first-child,
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure:first-child,
+.wp-block-group.parallax-background > .wp-block-group__inner-container > figure:first-child img,
+.wp-block-group.parallax-background > .wp-block-group__inner-container > img:first-child,
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure:first-child img,
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > img:first-child {
+    position:absolute;
+    top:0px;
+    right:0px;
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    object-fit: cover;
+
+    background-color:rgba(0,0,0,0);
+    background:none;
+}
+
+
+/*--------------------------------------------------------------
+# Extra
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+/* Bootstrap xs- | for-phone-only */
+@media only screen and (max-width: 575px) {
+
+}
+
+/* Bootstrap sm+ | for-tablet-portrait-up */
+@media only screen and (min-width: 576px) {
+
+}
+
+/* Bootstrap sm | for-tablet-portrait-only */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+}
+
+/* Bootstrap md+ | for-tablet-landscape-up */
+@media only screen and (min-width: 768px) {
+
+    .wp-block-group.parallax-background {
+        background-image:url(default_image_desktop.jpg);
+    }
+}
+
+/* Bootstrap md | for-tablet-landscape-only */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Bootstrap lg+ | for-desktop-up */
+@media only screen and (min-width: 992px) {
+/**** DEFAULT MEDIA QUERY - 992px width and larger ****/
+
+}
+
+/* Bootstrap lg | for-desktop-only */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Bootstrap xl+ | for-desktop-up */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* Bootstrap xl | for-desktop-only */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+}
+
+/* Bootstrap xxl+ | for-big-desktop-up */
+@media only screen and (min-width: 1400px) {
+
+}
+
+
+@media only print {
+
+}
