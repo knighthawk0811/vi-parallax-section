@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: VI: parallax Sections
+Plugin Name: VI: Parallax Sections
 Plugin URI: http://neathawk.com
-Description: styling of parallax sections, can add through block/groups
+Description: Styling of parallax sections: add classes to groups "parallax-background" "parallax-foreground" | Add an image to the beginning of the group
 Version: 0.1.200814
 Author: Joseph Neathawk
 Author URI: http://Neathawk.com
