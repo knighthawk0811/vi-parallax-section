@@ -37,22 +37,36 @@ element {
 /* parallax groups */
 .wp-block-group.parallax-background,
 .wp-block-group.parallax-foreground {
-    min-height:50vh !important;
     height:auto !important;
     max-width:100% !important;
     width:100% !important;
     margin:0 !important;
-    padding:1em;
+    padding:2rem;
     position:relative;
-}
-.wp-block-group.parallax-background {
-    background-attachment:fixed;
-    background-image:url(default_image_mobile.jpg);
+
     background-size:cover;
+}
+.wp-block-group.parallax-background{
     box-shadow:inset 0px 5px 5px -5px #000000, inset 0px -5px 5px -5px #000000;
 }
 .wp-block-group.parallax-foreground {
     box-shadow:none;
+}
+.wp-block-group.parallax-background::before,
+.wp-block-group.parallax-foreground::before {
+    content:"";
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+
+    background-size:cover;
+}
+.wp-block-group.parallax-background::before {
+    background-attachment:fixed;
+}
+.wp-block-group.parallax-foreground::before {
 }
 .wp-block-group.parallax-background > .wp-block-group__inner-container,
 .wp-block-group.parallax-foreground > .wp-block-group__inner-container {
@@ -113,9 +127,6 @@ element {
 /* Bootstrap md+ | for-tablet-landscape-up */
 @media only screen and (min-width: 768px) {
 
-    .wp-block-group.parallax-background {
-        background-image:url(default_image_desktop.jpg);
-    }
 }
 
 /* Bootstrap md | for-tablet-landscape-only */
