@@ -46,11 +46,9 @@ element {
 
     background-size:cover;
 }
-.wp-block-group.parallax-background{
-    box-shadow:inset 0px 5px 5px -5px #000000, inset 0px -5px 5px -5px #000000;
+.wp-block-group.parallax-background {
 }
 .wp-block-group.parallax-foreground {
-    box-shadow:none;
 }
 .wp-block-group.parallax-background::before,
 .wp-block-group.parallax-foreground::before {
@@ -65,8 +63,10 @@ element {
 }
 .wp-block-group.parallax-background::before {
     background-attachment:fixed;
+    box-shadow:inset 0px 5px 5px -5px #000000, inset 0px -5px 5px -5px #000000;
 }
 .wp-block-group.parallax-foreground::before {
+    box-shadow:none;
 }
 .wp-block-group.parallax-background > .wp-block-group__inner-container,
 .wp-block-group.parallax-foreground > .wp-block-group__inner-container {
@@ -79,12 +79,12 @@ element {
 .wp-block-group.parallax-foreground > .wp-block-group__inner-container > * {
     position:relative;
 }
-.wp-block-group.parallax-background > .wp-block-group__inner-container > figure:first-child,
-.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure:first-child,
-.wp-block-group.parallax-background > .wp-block-group__inner-container > figure:first-child img,
-.wp-block-group.parallax-background > .wp-block-group__inner-container > img:first-child,
-.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure:first-child img,
-.wp-block-group.parallax-foreground > .wp-block-group__inner-container > img:first-child {
+.wp-block-group.parallax-background > .wp-block-group__inner-container > figure.background,
+.wp-block-group.parallax-background > .wp-block-group__inner-container > figure.background img,
+.wp-block-group.parallax-background > .wp-block-group__inner-container > img.background,
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure.background,
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure.background img,
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > img.background {
     position:absolute;
     top:0px;
     right:0px;

@@ -21,6 +21,14 @@
  */
 jQuery(document).ready(function()
 {
+    //create a stylesheet
+    var styleEl = document.createElement('style');
+    // Append <style> element to <head>
+    document.head.appendChild(styleEl);
+    // Grab style element's sheet
+    var styleSheet = styleEl.sheet;
+
+
     jQuery(".wp-block-group.parallax-background").css('background-image', function(index){
         //create a unique identifier
         // stick a class name to this element
@@ -30,17 +38,11 @@ jQuery(document).ready(function()
         //make it invisible
         //grab its src value
         var first_image = jQuery(this).find( '.background img' ).first();
-        jQuery(first_image).css( "opacity", "0" ); 
+        jQuery(first_image).css( "opacity", "0" );
         if(first_image)
         {
         	index = jQuery(first_image).attr( "src" );
         }
-        //create a stylesheet
-        var styleEl = document.createElement('style');
-        // Append <style> element to <head>
-        document.head.appendChild(styleEl);
-        // Grab style element's sheet
-        var styleSheet = styleEl.sheet;
         //set this::before background-image to the first_image.src
         styleSheet.insertRule('.' + unique_id + '::before { background-image:url(' + index + ') }', styleSheet.cssRules.length);
 
@@ -56,17 +58,11 @@ jQuery(document).ready(function()
         //make it invisible
         //grab its src value
         var first_image = jQuery(this).find( '.background img' ).first();
-        jQuery(first_image).css( "opacity", "0" ); 
+        jQuery(first_image).css( "opacity", "0" );
         if(first_image)
         {
             index = jQuery(first_image).attr( "src" );
         }
-        //create a stylesheet
-        var styleEl = document.createElement('style');
-        // Append <style> element to <head>
-        document.head.appendChild(styleEl);
-        // Grab style element's sheet
-        var styleSheet = styleEl.sheet;
         //set this::before background-image to the first_image.src
         styleSheet.insertRule('.' + unique_id + '::before { background-image:url(' + index + ') }', styleSheet.cssRules.length);
 
