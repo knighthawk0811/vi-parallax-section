@@ -3,7 +3,7 @@
 Plugin Name: VI: Parallax Sections
 Plugin URI: http://neathawk.com
 Description: Styling of parallax sections: add classes to groups "parallax-background" "parallax-foreground" | Add an image to the beginning of the group
-Version: 0.1.200814
+Version: 0.5.210127
 Author: Joseph Neathawk
 Author URI: http://Neathawk.com
 License: GNU General Public License v2 or later
@@ -48,7 +48,7 @@ class vi_parallax_sections
 	public static function enqueue_scripts() {
 	    //style for the plugin
 	    wp_enqueue_style( 'vi-ps-css', plugins_url( '/style.css', __FILE__ ), NULL , NULL , 'all' );
-
+        //javascript for the plugin
 	    wp_enqueue_script( 'vi-ps-js', plugins_url( '/common.js', __FILE__ ), array('jquery') , NULL , true );
 	}
 

@@ -4,7 +4,7 @@ Tags: parallax, groups, block editor<br>
 Requires at least: 4.0<br>
 Requires PHP: 5.2.4<br>
 Tested up to: 5.4<br>
-Version: 0.4.200706<br>
+Version: 0.5.210127<br>
 Stable tag: trunk<br>
 License: GPLv2<br>
 License URI: http://www.gnu.org/licenses/gpl-2.0.html<br>
@@ -47,6 +47,9 @@ Any other img found there will be hidden.
 
 
 ## == Changelog ==
+
+*0.5.210127*
+* JS update, used jquery multi selector instead of duplicating a funciton for multiple things
 
 *0.1.200814*
 * FPL
