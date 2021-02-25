@@ -80,11 +80,17 @@ element {
     position:relative;
 }
 .wp-block-group.parallax-background > .wp-block-group__inner-container > figure.background,
+.wp-block-group.parallax-background > .wp-block-group__inner-container > figure:first-child:not(.p-omit),
 .wp-block-group.parallax-background > .wp-block-group__inner-container > figure.background img,
+.wp-block-group.parallax-background > .wp-block-group__inner-container > figure:first-child:not(.p-omit) img,
 .wp-block-group.parallax-background > .wp-block-group__inner-container > img.background,
+.wp-block-group.parallax-background > .wp-block-group__inner-container > img:first-child:not(.p-omit),
 .wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure.background,
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure:first-child:not(.p-omit),
 .wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure.background img,
-.wp-block-group.parallax-foreground > .wp-block-group__inner-container > img.background {
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure:first-child:not(.p-omit) img,
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > img.background,
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > img:first-child:not(.p-omit) {
     position:absolute;
     top:0px;
     right:0px;
