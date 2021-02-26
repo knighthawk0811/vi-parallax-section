@@ -63,10 +63,8 @@ element {
 }
 .wp-block-group.parallax-background::before {
     background-attachment:fixed;
-    box-shadow:inset 0px 5px 5px -5px #000000, inset 0px -5px 5px -5px #000000;
 }
 .wp-block-group.parallax-foreground::before {
-    box-shadow:none;
 }
 .wp-block-group.parallax-background > .wp-block-group__inner-container,
 .wp-block-group.parallax-foreground > .wp-block-group__inner-container {
@@ -79,12 +77,18 @@ element {
 .wp-block-group.parallax-foreground > .wp-block-group__inner-container > * {
     position:relative;
 }
-.wp-block-group.parallax-background > .wp-block-group__inner-container > figure.background,
-.wp-block-group.parallax-background > .wp-block-group__inner-container > figure.background img,
-.wp-block-group.parallax-background > .wp-block-group__inner-container > img.background,
-.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure.background,
-.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure.background img,
-.wp-block-group.parallax-foreground > .wp-block-group__inner-container > img.background {
+.wp-block-group.parallax-background > .wp-block-group__inner-container > figure.background:not(.p-omit),
+.wp-block-group.parallax-background > .wp-block-group__inner-container > figure:first-child:not(.p-omit),
+.wp-block-group.parallax-background > .wp-block-group__inner-container > figure.background:not(.p-omit) img,
+.wp-block-group.parallax-background > .wp-block-group__inner-container > figure:first-child:not(.p-omit) img,
+.wp-block-group.parallax-background > .wp-block-group__inner-container > img.background:not(.p-omit),
+.wp-block-group.parallax-background > .wp-block-group__inner-container > img:first-child:not(.p-omit),
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure.background:not(.p-omit),
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure:first-child:not(.p-omit),
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure.background:not(.p-omit) img,
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure:first-child:not(.p-omit) img,
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > img.background:not(.p-omit),
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > img:first-child:not(.p-omit) {
     position:absolute;
     top:0px;
     right:0px;
@@ -96,6 +100,42 @@ element {
 
     background-color:rgba(0,0,0,0);
     background:none;
+}
+
+/* align right */
+/* figure / container */
+.wp-block-group.parallax-background .wp-block-image,
+.wp-block-group.parallax-background .wp-block-image figure.alignright,
+.wp-block-group.parallax-foreground .wp-block-image,
+.wp-block-group.parallax-foreground .wp-block-image figure.alignright {
+    float: none;
+    margin: 0;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+}
+/* img */
+.wp-block-group.parallax-background .wp-block-image figure.alignright > img,
+.wp-block-group.parallax-foreground .wp-block-image figure.alignright > img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: auto;
+}
+
+/* align left */
+.wp-block-group.parallax-background > .wp-block-group__inner-container > div.p-left,
+.wp-block-group.parallax-background > .wp-block-group__inner-container > figure.p-left 
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > div.p-left,
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure.p-left {
+}
+.wp-block-group.parallax-background > .wp-block-group__inner-container > figure.p-left img,
+.wp-block-group.parallax-background > .wp-block-group__inner-container > img.p-left,
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure.p-left img,
+.wp-block-group.parallax-foreground > .wp-block-group__inner-container > img.p-left {
 }
 
 
