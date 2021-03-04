@@ -102,12 +102,13 @@ element {
     background:none;
 }
 
+
 /* align right */
 /* figure / container */
-.wp-block-group.parallax-background .wp-block-image,
-.wp-block-group.parallax-background .wp-block-image figure.alignright,
-.wp-block-group.parallax-foreground .wp-block-image,
-.wp-block-group.parallax-foreground .wp-block-image figure.alignright {
+.wp-block-group.parallax-background .wp-block-image.background,
+.wp-block-group.parallax-foreground .wp-block-image.background,
+.wp-block-group.parallax-background .wp-block-image.background figure.alignright,
+.wp-block-group.parallax-foreground .wp-block-image.background figure.alignright {
     float: none;
     margin: 0;
     position: absolute;
@@ -117,9 +118,10 @@ element {
     width: 100%;
 }
 /* img */
-.wp-block-group.parallax-background .wp-block-image figure.alignright > img,
-.wp-block-group.parallax-foreground .wp-block-image figure.alignright > img {
+.wp-block-group.parallax-background .wp-block-image.background figure.alignright > img,
+.wp-block-group.parallax-foreground .wp-block-image.background figure.alignright > img {
     position: absolute;
+    margin:0;
     top: 0px;
     right: 0px;
     height: 100%;
@@ -127,15 +129,28 @@ element {
 }
 
 /* align left */
-.wp-block-group.parallax-background > .wp-block-group__inner-container > div.p-left,
-.wp-block-group.parallax-background > .wp-block-group__inner-container > figure.p-left 
-.wp-block-group.parallax-foreground > .wp-block-group__inner-container > div.p-left,
-.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure.p-left {
+/* figure / container */
+.wp-block-group.parallax-background .wp-block-image.background,
+.wp-block-group.parallax-foreground .wp-block-image.background,
+.wp-block-group.parallax-background .wp-block-image.background figure.alignleft,
+.wp-block-group.parallax-foreground .wp-block-image.background figure.alignleft {
+    float: none;
+    margin: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
 }
-.wp-block-group.parallax-background > .wp-block-group__inner-container > figure.p-left img,
-.wp-block-group.parallax-background > .wp-block-group__inner-container > img.p-left,
-.wp-block-group.parallax-foreground > .wp-block-group__inner-container > figure.p-left img,
-.wp-block-group.parallax-foreground > .wp-block-group__inner-container > img.p-left {
+/* img */
+.wp-block-group.parallax-background .wp-block-image.background figure.alignleft > img,
+.wp-block-group.parallax-foreground .wp-block-image.background figure.alignleft > img {
+    position: absolute;
+    margin:0;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: auto;
 }
 
 
