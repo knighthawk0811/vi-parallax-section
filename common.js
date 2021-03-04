@@ -48,7 +48,7 @@ jQuery(document).ready(function()
         }
         if(first_image)
         {
-            //jQuery(first_image).css( "opacity", "0" );
+            jQuery(first_image).css( "opacity", "0" );
 
         	index = jQuery(first_image).attr( "src" );
 
